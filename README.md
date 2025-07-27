@@ -1,19 +1,19 @@
 ## About  
- `healthcare-assist.ai`  an intelligent and user-friendly virtual assistant for healthcare members. The assistant should streamline and enhance the member experience by offering accessible, personalized healthcare-related services
-
-## High Level Design
 ![alt text](images/image1.png)
 
 
 
 ## Schema/Tables Design 
 
+ `healthcare-assist.ai`  an intelligent and user-friendly virtual assistant for healthcare members. The assistant should streamline and enhance the member experience by offering accessible, personalized healthcare-related services
 
-- `Users` --> `health_benefits` [One-To-Many]
-- `Users` --> `appointments` [One-To-Many]
-- - - |---< `providers` [Many-To-One]
-- `Users` --> `care_remainders` [One-To-Many]
-- - - |---> `notifications_log` [One-To-Many]
+## High Level Design
+
+- `Users` --< `health_benefits` [One-To-Many]
+- `Users` --< `appointments` [One-To-Many]
+- - - |---> `providers` [Many-To-One]
+- `Users` --< `care_remainders` [One-To-Many]
+- - - |---< `notifications_log` [One-To-Many]
 
 ![alt text](images/schema1.png)
 
