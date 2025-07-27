@@ -2,7 +2,7 @@
  `healthcare-assist.ai`  an intelligent and user-friendly virtual assistant for healthcare members. The assistant should streamline and enhance the member experience by offering accessible, personalized healthcare-related services
 
 ## High Level Design
-![alt text](images\image1.png)
+![alt text](images/image1.png)
 
 
 
@@ -15,10 +15,10 @@
 - `Users` --> `care_remainders` [One-To-Many]
 - - - |---> `notifications_log` [One-To-Many]
 
-![alt text](images\schema1.png)
+![alt text](images/schema1.png)
 
 ## API endPoints 
-![alt text](images\image_endpoints.png)
+![alt text](images/image_endpoints.png)
 
 ## Managing Secrets
   To manage secrets securely, we can use tools like HashiCorp Vault or AWS Secrets Manager in production environments.
