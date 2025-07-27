@@ -1,0 +1,96 @@
+// DBML Schema for Healthcare Virtual Assistant
+
+Table users {
+  user_id INT [pk, not null]
+  first_name VARCHAR(100) [not null]
+  middle_name VARCHAR(100)
+  last_name VARCHAR(100) [not null]
+  email VARCHAR(255) [not null, unique]
+  mobile VARCHAR(20) [not null]
+  dob DATE [not null]
+  gender VARCHAR(20) [not null]
+  insurance_id VARCHAR(50) [unique]
+  country VARCHAR(50) [not null]
+  state VARCHAR(50) [not null]
+  city VARCHAR(50) [not null]
+  zip_code VARCHAR(10) [not null]
+  street_address VARCHAR(255)
+  role VARCHAR(20)
+  is_active BOOLEAN
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+}
+
+Table health_benefits {
+  health_benefit_id INT [pk, not null]
+  user_id INT [not null, ref: > users.user_id]
+  policy_type VARCHAR(50) [not null]
+  coverage_level VARCHAR(50)
+  policy_name VARCHAR(100)
+  provider_name VARCHAR(100)
+  effective_date DATE
+  expiration_date DATE
+  deductible DECIMAL(10, 2)
+  copay DECIMAL(10, 2)
+  coverage_details TEXT
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+}
+
+Table providers {
+  provider_id INT [pk, not null]
+  name VARCHAR(100) [not null]
+  specialty VARCHAR(100)
+  network_type VARCHAR(50)
+  facility_name VARCHAR(100)
+  address_line VARCHAR(255)
+  city VARCHAR(100)
+  state VARCHAR(50)
+  zip_code VARCHAR(10)
+  phone_number VARCHAR(20)
+  email VARCHAR(100)
+  availability JSON
+  rating DECIMAL(2,1)
+  accepting_new_patients BOOLEAN
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+}
+
+Table appointments {
+  appointment_id INT [pk, not null]
+  user_id INT [not null, ref: > users.user_id]
+  provider_id INT [not null, ref: > providers.provider_id]
+  appointment_date DATE [not null]
+  appointment_time TIME [not null]
+  appointment_type VARCHAR(50)
+  status VARCHAR(20) [default: 'scheduled']
+  reason TEXT
+  notes TEXT
+  created_at TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+  updated_at TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+}
+
+Table care_reminders {
+  reminder_id INT [pk, not null]
+  user_id INT [not null, ref: > users.user_id]
+  type VARCHAR(100) [not null]
+  message TEXT
+  scheduled_date DATE [not null]
+  frequency VARCHAR(50)
+  status VARCHAR(20) [default: 'pending']
+  priority VARCHAR(20) [default: 'normal']
+  created_at TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+  updated_at TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+}
+
+Table notifications_log {
+  id INT [pk, not null]
+  reminder_id INT [not null, ref: > care_reminders.reminder_id]
+  sent_at TIMESTAMP [not null]
+  channel VARCHAR(20) [not null]
+  status VARCHAR(20) [default: 'sent']
+  message_content TEXT
+  error_details TEXT
+  created_at TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+  updated_at TIMESTAMP [default: `CURRENT_TIMESTAMP`]
+}

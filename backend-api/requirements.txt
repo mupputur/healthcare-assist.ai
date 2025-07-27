@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pydantic
+pydantic[email]
+
+# JWT Authentication 
+python-jose[cryptography]
+passlib[bcrypt]
+
+# DB Connection 
+sqlalchemy
+asyncpg
+
+# Testing 
+httpx
+pytest
