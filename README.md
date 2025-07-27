@@ -1,14 +1,10 @@
 ## About  
-![alt text](images/image1.png)
-
-
-
-## Schema/Tables Design 
-
  `healthcare-assist.ai`  an intelligent and user-friendly virtual assistant for healthcare members. The assistant should streamline and enhance the member experience by offering accessible, personalized healthcare-related services
 
 ## High Level Design
+![alt text](images/image1.png)
 
+## Schema/Tables Design 
 - `Users` --< `health_benefits` [One-To-Many]
 - `Users` --< `appointments` [One-To-Many]
 - - - |---> `providers` [Many-To-One]
@@ -54,10 +50,10 @@ It ensures reproducible builds across environments
 
 ## Run Tests
 To run unittest 
-python -m unittest discover -s tests
-python -m unittest tests/test_module/<file_name>
-  Example : python -m unittest tests/unit-tests/utils/test_vault_secrets.py
-python -m unittest tests/test_module
+- python -m unittest discover -s tests   OR 
+- python -m unittest tests/test_module/<file_name> OR
+-  - Example : python -m unittest tests/unit-tests/utils/test_vault_secrets.py
+- python -m unittest tests/test_module 
 ###### TODO 
   - Need to implememt BDD Tests
 
