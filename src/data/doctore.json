@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Dr. John Smith",
+    "specialty": "Cardiologist",
+    "experience": "10 years",
+    "image": "https://images.pexels.com/photos/7084400/pexels-photo-7084400.jpeg",
+    "available": "Today 3:00 PM - 5:00 PM"
+  },
+  {
+    "name": "Dr. Sarah Lee",
+    "specialty": "Dermatologist",
+    "experience": "8 years",
+    "image": "https://images.pexels.com/photos/8376236/pexels-photo-8376236.jpeg",
+    "available": "Tomorrow 10:00 AM - 12:00 PM"
+  },
+  {
+    "name": "Dr. Michael Brown",
+    "specialty": "Pediatrician",
+    "experience": "12 years",
+    "image": "https://images.pexels.com/photos/8460094/pexels-photo-8460094.jpeg",
+    "available": "Today 4:00 PM - 6:00 PM"
+  },
+  {
+    "name": "Dr. Emily Davis",
+    "specialty": "Neurologist",
+    "experience": "9 years",
+    "image": "https://images.pexels.com/photos/5722160/pexels-photo-5722160.jpeg",
+    "available": "Fri 1:00 PM - 3:00 PM"
+  }
+]

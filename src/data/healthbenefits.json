@@ -1,0 +1,26 @@
+{
+  "policy_type": "Premium Plan",
+  "coverage_level": "Family",
+  "policy_name": "HealthSecure Gold",
+  "provider_name": "ABC Healthcare",
+  "effective_date": "2025-01-01",
+  "expiration_date": "2025-12-31",
+  "deductible": 5000,
+  "copay": 200,
+  "coverage_details": [
+    {
+      "category": "Preventive Care",
+      "services": [
+        { "name": "Annual Checkup", "copay": 0, "coinsurance": "10%", "limitations": "1 per year" },
+        { "name": "Vaccinations", "copay": 50, "coinsurance": "15%", "limitations": "Age restrictions apply" }
+      ]
+    },
+    {
+      "category": "Specialist Visits",
+      "services": [
+        { "name": "Cardiologist", "copay": 300, "coinsurance": "20%", "limitations": "Referral required" },
+        { "name": "Dermatologist", "copay": 250, "coinsurance": "25%", "limitations": "Referral required" }
+      ]
+    }
+  ]
+}

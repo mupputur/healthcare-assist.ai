@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. John Smith",
+    "specialty": "Cardiologist",
+    "facility_name": "Apollo Hospital",
+    "city": "Hyderabad",
+    "state": "TS",
+    "availability": "Mon-Fri, 9AM-5PM",
+    "accepting_new_patients": true,
+    "rating": 4.5,
+    "phone_number": "9876543210",
+    "email": "johnsmith@apollo.com"
+  },
+  {
+    "id": 2,
+    "name": "Dr. Sarah Lee",
+    "specialty": "Dermatologist",
+    "facility_name": "Care Clinic",
+    "city": "Bangalore",
+    "state": "KA",
+    "availability": "Tue-Sat, 10AM-6PM",
+    "accepting_new_patients": false,
+    "rating": 4.2,
+    "phone_number": "9876501234",
+    "email": "sarahlee@care.com"
+  },
+   {
+    "id": 3,
+    "name": "Dr. Emily Johnson",
+    "specialty": "pediatrician",
+    "facility_name": "City Children's Hospital",
+    "city": "New York",
+    "state": "NY",
+    "availability": "Mon-Fri, 8AM-4PM",
+    "accepting_new_patients": true,
+    "rating": 4.8,
+    "phone_number": "1234567890",
+    "email": "emily@citychildren.com"
+  
+  }
+  
+]
