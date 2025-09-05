@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,39 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.env
+.vscode/
+
+# Secrets or local configs
+*.env
+.vault.json
+
+# Pytest / coverage
+htmlcov/
+.tox/
+.coverage
+.cache
+.pytest_cache/
+
+# MyPy / Pylint
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# IDE files
+*.idea/
+*.swp
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+>>>>>>> origin/main
